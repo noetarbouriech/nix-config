@@ -1,8 +1,8 @@
 # ❄️ My NixOS Config/Dotfiles
 
 [![NixOS 21.05](https://img.shields.io/badge/NixOS-v21.05-blue.svg?style=flat&logo=NixOS&logoColor=white)](https://nixos.org)
-![GitHub](https://img.shields.io/github/license/noe-tarbouriech/dots)
-![GitHub last commit](https://img.shields.io/github/last-commit/noe-tarbouriech/dots)
+![GitHub](https://img.shields.io/github/license/noe-tarbouriech/nix-config)
+![GitHub last commit](https://img.shields.io/github/last-commit/noe-tarbouriech/nix-config)
 
 My dotfiles/NixOS config repo which uses GNU Makefiles and Nix language. It is used by both my laptop and my desktop in order to keep unformity between my devices.
 
