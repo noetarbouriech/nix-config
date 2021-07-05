@@ -1,0 +1,1 @@
+/home/noe/nix/hosts/thinkpad/configuration.nix

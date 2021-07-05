@@ -1,0 +1,4 @@
+[
+  ./packages/development
+  ./packages/gaming
+]
