@@ -7,10 +7,12 @@
     ./starship.nix
     ./mpv.nix
     ./git.nix
-    ./gpg.nix
   ];
 
   home.packages = with pkgs; [
+    # password manager
+    bitwarden
+
     # file
     ranger
 
@@ -24,7 +26,6 @@
     discord
     signal-desktop
     mailspring
-    libsecret #dependency
 
     # image
     feh

@@ -41,6 +41,8 @@
   location.latitude = 46.8566419; # coords Paris
   location.longitude = 2.3518481;
 
+  services.gnome.gnome-keyring.enable = true; # mailspring
+
   services.dbus = {
     enable = true;
     packages = [ pkgs.gnome3.dconf ]; # to avoid ca.desrt.dconf error
@@ -73,6 +75,7 @@
     extraGroups = [ "wheel" "docker" "networkmanager" ];
     shell = pkgs.fish;
   };
+
 
   # Basic system-wide packages
   environment.systemPackages = with pkgs; [
