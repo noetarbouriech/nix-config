@@ -47,6 +47,10 @@ Every single command is documented in the `Makefile`.
 - [ ] Implementing Nix Flakes in my config
 - [ ] Tidying things up (maybe ?)
 
+## Documentation
+
+![Installation](/doc/installing-nixos.md)
+
 ## License
 
 Everything is under the [MIT LICENSE](LICENSE). Feel free to copy stuff over to your own config.
