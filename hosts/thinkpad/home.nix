@@ -1,3 +1,1 @@
-[
-  # ./packages/development
-]
+(import ./packages/development)

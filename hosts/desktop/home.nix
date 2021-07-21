@@ -1,4 +1,1 @@
-[
-  ./packages/development
-  ./packages/gaming
-]
+(import ./packages/development) ++ (import ./packages/gaming)

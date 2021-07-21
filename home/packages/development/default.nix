@@ -1,0 +1,6 @@
+[
+  ./ide
+  ./misc
+  ./languages
+  # ./gamedev
+]
