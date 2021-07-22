@@ -32,6 +32,9 @@
 
   # sound.mediaKeys.enable = true;
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "noe" ];
+
   services = {
     xserver.libinput = {
       enable = true;
