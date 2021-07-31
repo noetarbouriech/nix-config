@@ -3,6 +3,7 @@
 {
   imports = [
     ./alacritty.nix
+    ./urxvt.nix
     ./fish.nix
     ./starship.nix
     ./mpv.nix
@@ -38,6 +39,13 @@
     # terminal
     fzf
     tmux
+
+    # utilities
+    scrot
+
+    # xorg
+    xlayoutdisplay
+    xclip
 
   ];
 
