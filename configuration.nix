@@ -76,10 +76,12 @@
     shell = pkgs.fish;
   };
 
+  # Set nvim as the default editor
+  environment.variables.EDITOR = "nvim";
 
   # Basic system-wide packages
   environment.systemPackages = with pkgs; [
-    curl wget vim gnumake git tela-icon-theme pavucontrol font-manager
+    curl wget vim gnumake git tela-icon-theme pavucontrol font-manager python3
   ];
 
   # Fonts 

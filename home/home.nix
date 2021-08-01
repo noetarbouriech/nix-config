@@ -17,9 +17,6 @@
 
     packages = with pkgs; [
       xdg_utils       # utils
-      fish            # shell
-      starship        # prompt
-      neovim          # editor
     ];
   };
 

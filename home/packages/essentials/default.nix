@@ -2,4 +2,5 @@
   ./wm
   ./browsers
   ./utilities
+  ./neovim
 ]
