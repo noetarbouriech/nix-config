@@ -4,10 +4,14 @@
   imports = [
     ./alacritty.nix
     ./urxvt.nix
+
     ./fish.nix
     ./starship.nix
-    ./mpv.nix
     ./git.nix
+    ./tmux.nix
+
+    ./mpv.nix
+    ./dunst.nix
   ];
 
   home.packages = with pkgs; [
@@ -38,7 +42,6 @@
 
     # terminal
     fzf
-    tmux
 
     # utilities
     scrot

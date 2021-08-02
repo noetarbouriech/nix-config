@@ -14,13 +14,18 @@
       sv = "sudo nvim";
 
       py = "python3";
+
+      nix-shell = "nix-shell --run fish";
+      nixsh = "nix-shell -p";
+
+      t = "tmux";
     };
 
-    # functions = {
-    #   fish_user_key_bindings = {
-    #     fish_vi_key_bindings
-    #   };
-    # };
+    functions = {
+      fish_greeting = "";
+    };
+
+    interactiveShellInit = "fish_vi_key_bindings";
 
   };
 

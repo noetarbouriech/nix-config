@@ -6,15 +6,29 @@
     enableFishIntegration = true;
 
     settings = {
-      # add_newline = false;
+      character = {
+        success_symbol = "[\\$](bold green)";
+        error_symbol = "[\\$](bold red)";
+        vicmd_symbol = "[](bold green)";
+      };
+      add_newline = true;
+      package.disabled = true;
+      nix_shell.disabled = false;
 
-      # character = {
-      #   success_symbol = "[➜](bold green)";
-      #   error_symbol = "[➜](bold red)";
-      # };
+      directory.read_only = " ";
+      docker_context.symbol = " ";
+      git_branch.symbol = " ";
+      golang.symbol = " ";
+      java.symbol = " ";
+      nix_shell.symbol = " ";
+      package.symbol = " ";
+      php.symbol = " ";
+      python.symbol = " ";
+      rust.symbol = " ";
+      shlvl.symbol = " ";
 
-      # package.disabled = true;
     };
+
   };
 
 }
