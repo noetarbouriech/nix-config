@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Name of the device
@@ -10,11 +10,12 @@
       efi.canTouchEfiVariables = true;
       systemd-boot = {
         enable = true;
-	configurationLimit = 5;
+	      configurationLimit = 5;
       };
     };
   };
 
+  # hardware specific settings
   hardware = {
     acpilight.enable = true;
     trackpoint = {
@@ -30,22 +31,35 @@
     powertop.enable = true;
   };
 
-  # sound.mediaKeys.enable = true;
-
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "noe" ];
 
   services = {
-    xserver.libinput = {
+    xserver = {
       enable = true;
-      touchpad = {
-        tappingDragLock = false;
-      };
-    };
 
-    xserver.deviceSection = ''
-      Option "TearFree" "true" 
+      # touchpad settings
+      libinput = {
+        enable = true;
+        touchpad = {
+          tappingDragLock = false;
+        };
+      };
+
+      deviceSection = ''
+        Option "TearFree" "true" 
       '';
+
+      # window manager (bspwm)
+      windowManager.bspwm.enable = true;
+
+      # lightdm
+      displayManager = {
+        defaultSession = "none+bspwm";
+        lightdm.enable = true;
+      };
+
+    };
 
     # battery related services
     tlp.enable = true;
@@ -54,8 +68,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    acpi brightnessctl powertop
+    acpi brightnessctl powertop 
   ];
-
 
 }

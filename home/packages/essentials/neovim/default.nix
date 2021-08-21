@@ -18,7 +18,7 @@
     };
 
     plugins = with pkgs.vimPlugins; [
-      fugitive
+      # fugitive
       nord-vim
       vim-commentary
       lualine-nvim

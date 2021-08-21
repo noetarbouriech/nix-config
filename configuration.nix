@@ -19,18 +19,9 @@
     networkmanager.enable = true;
   };
 
-  # Enable X with xfce as DE and bspwm as WM
+  # Enable X
   services.xserver = {
     enable = true;
-
-    windowManager.bspwm = {
-      enable = true;
-    };
-
-    displayManager = {
-      defaultSession = "none+bspwm";
-      lightdm.enable = true;
-    };
 
     layout = "us"; # keymap configuration
     xkbOptions = "eurosign:e";
@@ -98,14 +89,6 @@
     route159
     libertine
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # This value must be kept at all costs for some reason... check man for more details
   system.stateVersion = "21.05"; 

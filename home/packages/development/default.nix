@@ -2,5 +2,5 @@
   ./ide
   ./misc
   ./languages
-  # ./gamedev
+  ./gamedev
 ]

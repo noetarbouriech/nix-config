@@ -36,10 +36,10 @@ Every single command is documented in the `Makefile`.
 
 - [ ] Add the rest of the config like neovim, gaming, etc...
 - [ ] Rofi power menu
-- [ ] Colorscheme
+- [x] Colorscheme
 - [ ] Improving sxhkd and dunst config
-- [ ] Switch from alacritty to urxvt
 - [ ] Configure lightdm better
+- [ ] Switch to sway with tuigreet instead of lightdm
 
 ### One day maybe ?
 
