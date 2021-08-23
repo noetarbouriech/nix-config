@@ -3,12 +3,9 @@
 {
   imports = [
     ./vscodium.nix
+    ./intellij.nix
   ];
 
-  home.packages = with pkgs; [
-    jetbrains.idea-ultimate     # Intellij idea
-    jetbrains.jdk
-  ];
 
 }
 

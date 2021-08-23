@@ -3,7 +3,7 @@
 {
   imports = [
     ./go.nix
-    # ./java.nix
+    ./java.nix
     ./python.nix
   ];
 }
