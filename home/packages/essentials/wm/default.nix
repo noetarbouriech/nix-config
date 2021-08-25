@@ -37,7 +37,6 @@
   home.packages = with pkgs; [
     networkmanagerapplet 
     # (import ./bwall.nix) # use too much power
-    (import ./wall.nix)
   ];
 
 
