@@ -42,9 +42,15 @@
 
     # terminal
     fzf
+    silicon
+    glow
+    gotop
+    ncdu
 
     # utilities
     scrot
+    gcc
+    lm_sensors
 
     # xorg
     xlayoutdisplay
