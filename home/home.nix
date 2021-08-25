@@ -7,6 +7,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  
+  # mute home-manager news
+  news.display = "silent";
+
   home = {
     # Current stable version for Home Manager
     stateVersion = "21.05";

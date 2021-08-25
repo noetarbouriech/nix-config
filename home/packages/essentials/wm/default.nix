@@ -20,7 +20,9 @@
     profileExtra = ''
       xset r rate 280 70 &
       nm-applet &
+      feh --bg-scale ~/pics/wall.png &
     '';
+    # current wallpaper: https://www.microsoft.com/en-us/microsoft-365/blog/uploads/prod/sites/2/2021/06/Msft_Nostalgia_Solitaire.jpg
 
   };
 
@@ -33,7 +35,10 @@
   };
 
   home.packages = with pkgs; [
-    networkmanagerapplet
+    networkmanagerapplet 
+    # (import ./bwall.nix) # use too much power
+    (import ./wall.nix)
   ];
+
 
 }
