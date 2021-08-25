@@ -89,8 +89,8 @@
        # focus the older or newer node in the focus history
        "super + {o,i}" = ''
          bspc wm -h off; \
-	 bspc node {older,newer} -f; \
-	 bspc wm -h on";
+	       bspc node {older,newer} -f; \
+	       bspc wm -h on";
        '';
 
        # focus or send to the given desktop

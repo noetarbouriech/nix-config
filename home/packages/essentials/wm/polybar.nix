@@ -35,7 +35,7 @@
         module-margin = 1;
         enable-ipc = true;
         fixed-center = true;
-	tray-position = "right";
+        tray-position = "right";
       };
 
       "module/bspwm" = {
@@ -56,13 +56,13 @@
       };
 
       "module/temperature" = {
-	type = "internal/temperature";
+        type = "internal/temperature";
         interval = 3;
-	thermal-zone = 0;
-	base-temperature = 30;
-	warn-temperature = 80;
-	label-warn-foreground = "#f00";
-	format = "<ramp> <label>";
+        thermal-zone = 0;
+        base-temperature = 30;
+        warn-temperature = 80;
+        label-warn-foreground = "#f00";
+        format = "<ramp> <label>";
         ramp-0 = "";
         ramp-1 = "";
         ramp-2 = "";
@@ -73,13 +73,13 @@
 
       "module/date" = {
         type = "internal/date";
-	date = "%H:%M";
-	date-alt = "%A, %B %d, %Y";
+        date = "%H:%M";
+        date-alt = "%A, %B %d, %Y";
       };
 
       "module/pulseaudio" = {
         type = "internal/pulseaudio";
-	interval = 2;
+        interval = 2;
         format-volume = "<ramp-volume> <label-volume>";
         ramp-volume-0 = "";
         ramp-volume-1 = "";
@@ -90,24 +90,24 @@
 
       "module/battery" = {
         type = "internal/battery";
-	battery = "BAT0";
-	adapter = "AC";
+        battery = "BAT0";
+        adapter = "AC";
 
-	format-charging = "<animation-charging> <label-charging>";
-	format-discharging = "<ramp-capacity> <label-discharging>";
+        format-charging = "<animation-charging> <label-charging>";
+        format-discharging = "<ramp-capacity> <label-discharging>";
 
-	ramp-capacity-0 = "";
-	ramp-capacity-1 = "";
-	ramp-capacity-2 = "";
-	ramp-capacity-3 = "";
-	ramp-capacity-4 = "";
+        ramp-capacity-0 = "";
+        ramp-capacity-1 = "";
+        ramp-capacity-2 = "";
+        ramp-capacity-3 = "";
+        ramp-capacity-4 = "";
 
-	animation-charging-0 = "";
-	animation-charging-1 = "";
-	animation-charging-2 = "";
-	animation-charging-3 = "";
-	animation-charging-4 = "";
-	animation-charging-framerate = 750;
+        animation-charging-0 = "";
+        animation-charging-1 = "";
+        animation-charging-2 = "";
+        animation-charging-3 = "";
+        animation-charging-4 = "";
+        animation-charging-framerate = 750;
       };
 
 
