@@ -34,6 +34,12 @@
        # brightness down
        "XF86MonBrightnessDown" = "brightnessctl s 17-";
 
+       # screenshot
+       "Print" = "scrot -s -e 'xclip -selection clipboard -t image/png -i $f' -e 'mv $f ~/pics/screenshots'";
+
+       # lock screen
+       "super + x" = "light-locker-command -l";
+
 
        #
        # BSPWM HOTKEYS

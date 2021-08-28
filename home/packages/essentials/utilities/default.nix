@@ -20,6 +20,7 @@
 
     # file
     ranger
+    xfce.thunar
 
     # office
     libreoffice-fresh
@@ -51,10 +52,14 @@
     scrot
     gcc
     lm_sensors
+    killall
 
     # xorg
     xlayoutdisplay
     xclip
+    xcape
+    xdotool
+    xorg.xmodmap
 
   ];
 

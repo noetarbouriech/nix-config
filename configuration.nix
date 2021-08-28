@@ -72,7 +72,7 @@
 
   # Basic system-wide packages
   environment.systemPackages = with pkgs; [
-    curl wget vim gnumake git tela-icon-theme pavucontrol font-manager python3
+    curl wget vim gnumake git pavucontrol font-manager python3
   ];
 
   # Fonts 

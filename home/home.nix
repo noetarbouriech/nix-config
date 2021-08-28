@@ -16,6 +16,12 @@
     stateVersion = "21.05";
     enableNixpkgsReleaseCheck = false;
 
+    keyboard = {
+      layout = "us";
+      variant = "intl";
+      options = [ "caps:super" ];
+    };
+
     username = "noe";
     homeDirectory = "/home/noe";
 
