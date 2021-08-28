@@ -29,7 +29,7 @@
         wm-restack = "bspwm";
         modules-left = "bspwm";
         modules-center = "date";
-        modules-right = "newsboat temperature pulseaudio battery";
+        modules-right = "newsboat backlight temperature pulseaudio battery";
         padding-left = 1;
         padding-right = 0;
         module-margin = 1;
@@ -53,6 +53,19 @@
         label-occupied-padding = 1;
         label-empty = "";
         label-empty-padding = 1;
+      };
+
+      "module/backlight" = {
+        type = "internal/backlight";
+        card = "amdgpu_bl0";
+        use-actual-brightness = false;
+        enable-scroll = true;
+        format = "<ramp> <label>";
+        label = "%percentage%%";
+        ramp-0 = "";
+        ramp-1 = "";
+        ramp-2 = "";
+        ramp-3 = "";
       };
 
       "module/temperature" = {
