@@ -24,6 +24,10 @@
 
     # office
     libreoffice-fresh
+    hunspellDicts.en_GB-large
+    hunspellDicts.en_US-large
+    hunspellDicts.fr-any
+    hunspellDicts.fr-moderne
     obsidian
     zotero
     zathura

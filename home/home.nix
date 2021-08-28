@@ -22,6 +22,17 @@
       options = [ "caps:super" ];
     };
 
+    # Replace ć by cedilla on keyboard
+    sessionVariables = {
+      GTK_IM_MODULE = "cedilla";
+      QT_IM_MODULE = "cedilla";
+    };
+    file.".XCompose".text = ''
+      include "%L"
+      <dead_acute><C> : "Ç"
+      <dead_acute><c> : "ç"
+    '';
+
     username = "noe";
     homeDirectory = "/home/noe";
 
