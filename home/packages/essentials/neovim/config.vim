@@ -1,4 +1,6 @@
 colorscheme nord
+set background=dark
+set t_Co=256
 syntax on
 set nu
 set noerrorbells
@@ -22,33 +24,29 @@ set mouse=a
 set incsearch
 set nohlsearch
 set updatetime=300
+set clipboard=unnamedplus
+set guifont=FantasqueSansMono\ Nerd\ Font:h14
+
+if $TERM =~# '256color' && ( $TERM =~# '^screen'  || $TERM =~# '^tmux' )
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
 
 lua <<EOF
-require'lualine'.setup {
-  options = {
-    icons_enabled = true,
-    theme = 'nord',
-    component_separators = {'', ''},
-    section_separators = {'', ''},
-    disabled_filetypes = {}
+vim.defer_fn(function()
+  vim.cmd [[
+    luafile /home/noe/nix/home/packages/essentials/neovim/lua/lsp.lua
+    luafile /home/noe/nix/home/packages/essentials/neovim/lua/lualine.lua
+    luafile /home/noe/nix/home/packages/essentials/neovim/lua/toggleterm.lua
+  ]]
+end, 70)
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "nix", "python", "java", "go", "css", "html", "gdscript", "c", "javascript", "yaml" }, 
+  highlight = {
+    enable = true,
   },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  extensions = {'fugitive'}
 }
 EOF
