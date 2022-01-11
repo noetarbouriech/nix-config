@@ -9,6 +9,8 @@
   # Allow non-free software to be installed
   nixpkgs.config.allowUnfree = true;
 
+  programs.steam.enable = true;
+
   # Set the time zone
   time.timeZone = "Europe/Paris";
                                                                                                                                                                                               
@@ -29,10 +31,9 @@
   };
 
   services.redshift.enable = true;
+  services.redshift.provider = "manual";
   location.latitude = 46.8566419; # coords Paris
   location.longitude = 2.3518481;
-
-  services.gnome.gnome-keyring.enable = true; # mailspring
 
   services.dbus = {
     enable = true;
@@ -59,6 +60,11 @@
     };
   };
 
+  # FR locale for time
+  i18n.extraLocaleSettings = {
+    LC_MESSAGES = "en_US.UTF-8";
+    LC_TIME = "fr_FR.UTF-8";
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.noe = {
@@ -72,7 +78,7 @@
 
   # Basic system-wide packages
   environment.systemPackages = with pkgs; [
-    curl wget vim gnumake git pavucontrol font-manager python3
+    curl wget vim gnumake git pavucontrol font-manager python3 unzip
   ];
 
   # Fonts 
@@ -89,6 +95,16 @@
     route159
     libertine
   ];
+
+  
+  services.nginx.enable = true;
+  services.nginx.virtualHosts.localhost = {
+    root = "/home/noe/ProjetTutore-Takuzu";
+  };
+  services.nginx.user = "noe"; # Replace accordingly, I just use my normal user
+
+
+
 
   # This value must be kept at all costs for some reason... check man for more details
   system.stateVersion = "21.05"; 

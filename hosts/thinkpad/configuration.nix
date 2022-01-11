@@ -1,5 +1,9 @@
 { config, pkgs, lib, ... }:
 
+let
+  unstableConf = { allowUnfree = true; };
+  unstable = import <unstable> { config = unstableConf; };
+in
 {
   # Name of the device
   networking.hostName = "noe-laptop";
@@ -90,7 +94,12 @@
 
       };
 
+    };
 
+    # TailScale
+    tailscale = {
+      enable = true;
+      package = unstable.tailscale;
     };
 
     # Battery related services
