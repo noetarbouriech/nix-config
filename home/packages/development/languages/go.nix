@@ -4,7 +4,7 @@
   programs.go = {
     enable = true;
 
-    goPath = ".local/share/go";
+    goPath = "code/go";
 
     packages = {
       "golang.org/x/text" = builtins.fetchGit "https://go.googlesource.com/text";

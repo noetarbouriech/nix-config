@@ -10,6 +10,7 @@
       redhat.java           # LSP support for java
       golang.Go             # LSP support for go
       redhat.vscode-yaml    # LSP support for yaml
+      ms-python.python      # LSP support for python
 
       vscodevim.vim         # vim in vscode
       eamodio.gitlens       # git but better

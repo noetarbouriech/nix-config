@@ -6,6 +6,7 @@
     ./sxhkd.nix
     ./polybar.nix
     ./rofi.nix
+    ./dunst.nix
   ];
 
   xsession = {

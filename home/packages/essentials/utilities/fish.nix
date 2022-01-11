@@ -11,6 +11,7 @@
       ".." = "cd ..";
 
       v = "nvim";
+      lv = "~/.local/bin/lvim";
       sv = "sudo nvim";
 
       py = "python3";

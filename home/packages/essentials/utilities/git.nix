@@ -11,7 +11,16 @@
       "*.swp"
     ];
 
+    extraConfig = { 
+      pull.rebase = true;
+      rebase.autoStash = true;
+    };
+
   };
 
-  home.packages = with pkgs; [ git-crypt tig ];
+  programs.lazygit = {
+    enable = true;
+  };
+
+  home.packages = with pkgs; [ git-crypt tig gh ];
 }

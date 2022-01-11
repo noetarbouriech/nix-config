@@ -6,6 +6,10 @@
     ./intellij.nix
   ];
 
+  home.packages = with pkgs; [
+    spyder
+    neovide
+  ];
 
 }
 

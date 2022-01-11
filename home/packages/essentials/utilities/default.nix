@@ -1,5 +1,9 @@
 { pkgs, ... }:
 
+let
+  unstableConf = { allowUnfree = true; };
+  unstable = import <unstable> { config = unstableConf; };
+in
 {
   imports = [
     ./alacritty.nix
@@ -9,6 +13,7 @@
     ./starship.nix
     ./git.nix
     ./tmux.nix
+    ./ssh.nix
 
     ./mpv.nix
     ./dunst.nix
@@ -28,14 +33,17 @@
     hunspellDicts.en_US-large
     hunspellDicts.fr-any
     hunspellDicts.fr-moderne
-    obsidian
+    unstable.obsidian
+    neuron-notes
     zotero
     zathura
+    hplipWithPlugin
 
     # communication
-    discord
+    unstable.discord
     signal-desktop
-    mailspring
+    # mailspring
+    thunderbird-91
 
     # image
     feh
@@ -45,12 +53,16 @@
     # video
     obs-studio
 
+    # fun
+    cowsay 
+
     # terminal
     fzf
     silicon
     glow
     gotop
     ncdu
+    ripgrep
 
     # utilities
     scrot

@@ -1,9 +1,12 @@
 { pkgs, ... }:
 
+let
+  unstable = import <unstable> { };
+in
 {
   home.packages = with pkgs; [
     aseprite      # pixel art editor
-    godot         # game engine
+    unstable.godot         # game engine
   ];
 
 }

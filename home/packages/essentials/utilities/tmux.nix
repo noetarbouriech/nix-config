@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 
+let
+  tt = pkgs.writeShellScriptBin "tt" ''
+    tmux a -t $(tmux ls -F "#{session_name}" | fzf)    
+  '';
+in
 {
   programs.tmux = {
     enable = true;
@@ -9,6 +14,11 @@
     historyLimit = 5000;
     keyMode = "vi";
     prefix = "C-a";
+    terminal = "screen-256color";
+    extraConfig = ''
+      set-option -g default-terminal "screen-256color"
+      set-option -g terminal-overrides "screen-256color"
+    '';
 
     plugins = with pkgs.tmuxPlugins; [
       nord
@@ -28,6 +38,8 @@
       }
 
     ];
-
   };
+
+  home.packages = with pkgs; [ tt ];
+
 }
