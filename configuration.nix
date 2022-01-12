@@ -60,6 +60,9 @@
     };
   };
 
+  # Enables the docker service
+  virtualisation.docker.enable = true;
+
   # FR locale for time
   i18n.extraLocaleSettings = {
     LC_MESSAGES = "en_US.UTF-8";
