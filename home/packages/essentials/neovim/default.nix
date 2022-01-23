@@ -53,7 +53,7 @@ in
       # utils
       vim-commentary
       lualine-nvim
-      nvim-toggleterm-lua
+      toggleterm-nvim
 
       # lsp
       nvim-lspconfig

@@ -42,8 +42,7 @@ in
     # communication
     unstable.discord
     signal-desktop
-    # mailspring
-    thunderbird-91
+    thunderbird
 
     # image
     feh

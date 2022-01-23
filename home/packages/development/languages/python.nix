@@ -4,7 +4,6 @@ with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
     requests
-    python-language-server
     numpy
     matplotlib
     parso
