@@ -31,13 +31,13 @@
   };
 
   services.redshift.enable = true;
-  services.redshift.provider = "manual";
+  location.provider = "manual";
   location.latitude = 46.8566419; # coords Paris
   location.longitude = 2.3518481;
 
   services.dbus = {
     enable = true;
-    packages = [ pkgs.gnome3.dconf ]; # to avoid ca.desrt.dconf error
+    packages = [ pkgs.dconf ]; # to avoid ca.desrt.dconf error
   };
   programs.dconf.enable = true;
 

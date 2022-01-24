@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     lutris
-    multimc
+    polymc
   ];
 
 }
