@@ -35,6 +35,7 @@
 
     username = "noe";
     homeDirectory = "/home/noe";
+    sessionPath = [ "$HOME/bin" ];
 
     packages = with pkgs; [
       xdg_utils       # utils

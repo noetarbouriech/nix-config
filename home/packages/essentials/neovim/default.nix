@@ -14,12 +14,6 @@ let
   unstable = import <unstable> { config = unstableConf; };
 in
 {
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-    }))
-  ];
-
   home.packages = with pkgs; [
     rnix-lsp # doesn't work in autocomplete
     gopls
@@ -30,13 +24,9 @@ in
 
   programs.neovim = { 
     enable = true;
-    package = pkgs.neovim-nightly;
+    withPython3  = true; # for plugins
     
-    # extraConfig = builtins.readFile ./config.vim; # broken
-
-    configure = {
-      customRC = builtins.readFile ./config.vim;
-    };
+    extraConfig = builtins.readFile ./config.vim; 
 
     plugins = with pkgs.vimPlugins; [
       # colorscheme
@@ -54,13 +44,14 @@ in
       vim-commentary
       lualine-nvim
       toggleterm-nvim
+      telescope-nvim
 
       # lsp
       nvim-lspconfig
       vim-nix
 
       # autocomplete
-      nvim-compe
+      nvim-cmp
     ];
 
   };

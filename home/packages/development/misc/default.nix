@@ -11,6 +11,10 @@ in
     ansible 
     docker
     vagrant 
+    /* google-cloud-sdk */
+    /* kubectl */
+    yarn
+    # android-studio
 
     # uml
     unstable.staruml

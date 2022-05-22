@@ -16,7 +16,7 @@ in
     ./ssh.nix
 
     ./mpv.nix
-    ./dunst.nix
+    # ./dunst.nix broken
   ];
 
   home.packages = with pkgs; [
@@ -43,6 +43,7 @@ in
     unstable.discord
     signal-desktop
     thunderbird
+    slack
 
     # image
     feh
@@ -68,6 +69,8 @@ in
     gcc
     lm_sensors
     killall
+
+    texlive.combined.scheme-full
 
     # xorg
     xlayoutdisplay

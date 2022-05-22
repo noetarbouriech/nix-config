@@ -37,9 +37,7 @@ endif
 lua <<EOF
 vim.defer_fn(function()
   vim.cmd [[
-    luafile /home/noe/nix/home/packages/essentials/neovim/lua/lsp.lua
-    luafile /home/noe/nix/home/packages/essentials/neovim/lua/lualine.lua
-    luafile /home/noe/nix/home/packages/essentials/neovim/lua/toggleterm.lua
+    luafile /home/noe/nix/home/packages/essentials/neovim/init.lua
   ]]
 end, 70)
 

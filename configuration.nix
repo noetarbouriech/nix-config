@@ -99,16 +99,6 @@
     libertine
   ];
 
-  
-  services.nginx.enable = true;
-  services.nginx.virtualHosts.localhost = {
-    root = "/home/noe/ProjetTutore-Takuzu";
-  };
-  services.nginx.user = "noe"; # Replace accordingly, I just use my normal user
-
-
-
-
   # This value must be kept at all costs for some reason... check man for more details
   system.stateVersion = "21.11"; 
 
