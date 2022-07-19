@@ -1,1 +1,1 @@
-(import ./packages/development) ++ (import ./packages/gaming)
+(import ../../modules/development) ++ (import ../../modules/gaming)

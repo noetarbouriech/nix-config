@@ -1,6 +1,0 @@
-[
-  ./wm
-  ./browsers
-  ./utilities
-  ./neovim
-]

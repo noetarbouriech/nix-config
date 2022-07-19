@@ -1,55 +1,41 @@
 # ❄️ My NixOS Config/Dotfiles
 
-[![NixOS 21.05](https://img.shields.io/badge/NixOS-v21.05-blue.svg?style=flat&logo=NixOS&logoColor=white)](https://nixos.org)
+[![NixOS unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?style=flat&logo=NixOS&logoColor=white)](https://nixos.org)
 ![GitHub](https://img.shields.io/github/license/noe-tarbouriech/nix-config)
 ![GitHub last commit](https://img.shields.io/github/last-commit/noe-tarbouriech/nix-config)
 
-My dotfiles/NixOS config repo which uses GNU Makefiles and Nix language. It is used by both my laptop and my desktop in order to keep unformity between my devices.
-
-> /!\ still a WIP
-
-## What is NixOS ?
-
-NixOS is a linux distribution which uses a statically typed configuration to define itself.
+My dotfiles/NixOS config repo which uses Nix language and Nix flakes. It is used by both my laptop and my desktop in order to keep uniformity between my devices.
 
 ## Usage
 
 - Install NixOS minimal ISO image (tutorial)
 
-- Clone the repo inside a folder in `$HOME` like `~/dots/`
+- Clone the repo inside a folder in `$HOME` like `~/nix/`
 
-Those dotfiles work using the `make` command; 
+- Use the following command to install the config
 
-| command           | description                                              |
-|------------------ | -------------------------------------------------------- |
-| `make init`       | symlink config files and install home-manager            |
-| `make` (`update`) | `git pull` and rebuild the config using `nixos-rebuild`  |
-| `make push`       | basically push configs to git                            |
-| `make clear`      | clear pre-existent config                                |
+```shell
+sudo nixos-rebuild switch --flake .#DEVICE_NAME
+```
 
-Every single command is documented in the `Makefile`.
+## Current devices
 
-
-## ToDo
-
-### Near future
-
-- [ ] Add the rest of the config like neovim, gaming, etc...
-- [ ] Rofi power menu
-- [x] Colorscheme
-- [ ] Improving sxhkd and dunst config
-- [ ] Configure lightdm better
-- [ ] Switch to sway with tuigreet instead of lightdm
-
-### One day maybe ?
-
-- [x] Automating setup using Makefiles
-- [ ] Implementing Nix Flakes in my config
-- [ ] Tidying things up (maybe ?)
+- Thinkpad
+- Desktop
 
 ## Documentation
 
 ![Installation](/doc/installing-nixos.md)
+
+## Thanks to
+
+- [sioodmy's dotfiles](https://github.com/sioodmy/dotfiles)
+- [Matthias Benaets's nixos-config](https://github.com/MatthiasBenaets/nixos-config)
+- [notusknot's dotfiles-nix](https://github.com/notusknot/dotfiles-nix)
+
+## Old config
+
+Can be found in `old` branch
 
 ## License
 

@@ -1,1 +1,6 @@
-(import ./packages/development) ++ (import ./packages/gaming)
+{
+  imports = [
+    ../home.nix
+    ../../modules/development
+  ];
+}

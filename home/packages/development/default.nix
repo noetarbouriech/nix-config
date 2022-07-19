@@ -1,6 +1,0 @@
-[
-  ./ide
-  ./misc
-  ./languages
-  ./gamedev
-]
