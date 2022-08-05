@@ -8,6 +8,7 @@
     /* google-cloud-sdk */
     /* kubectl */
     yarn
+    insomnia
     # android-studio
 
     # uml

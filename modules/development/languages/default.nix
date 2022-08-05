@@ -6,5 +6,6 @@
     ./java.nix
     ./python.nix
     ./php.nix
+    ./rust.nix
   ];
 }

@@ -15,7 +15,7 @@
           family = "FantasqueSansMono Nerd Font";
           style = "Regular";
         };
-        size = 8.0;
+        size = 12.0;
       };
 
       # Nord Theme 
