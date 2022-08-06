@@ -14,6 +14,7 @@
     extraConfig = { 
       pull.rebase = true;
       rebase.autoStash = true;
+      submodule.recurse = true;
     };
 
   };
