@@ -14,9 +14,11 @@ in
     keyMode = "vi";
     prefix = "C-a";
     terminal = "screen-256color";
+    escapeTime = 0;
     extraConfig = ''
       set-option -g default-terminal "screen-256color"
       set-option -g terminal-overrides "screen-256color"
+      set-option -g mouse on
     '';
 
     plugins = with pkgs.tmuxPlugins; [

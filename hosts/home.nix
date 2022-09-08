@@ -32,7 +32,7 @@
 
     username = "${user}";
     homeDirectory = "/home/${user}";
-    sessionPath = [ "$HOME/bin" ];
+    sessionPath = [ "$HOME/bin" "$HOME/go/bin" ];
 
     packages = with pkgs; [
       xdg_utils
